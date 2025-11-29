@@ -156,7 +156,7 @@ const program = async () => {
 
         const body: Record<string, any> = {
             title: titleAndSubtitle(data),
-            body: data.message,
+            body: data.message || data.title || 'Komodo Alert',
             type: notifyType
         }
         if(tag !== undefined) {
